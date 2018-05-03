@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hot Finds</title>
+  <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -19,14 +19,44 @@
     </div>
 
     <!-- Marslist Listings -->
-    {% for listing in listings %}
-    <div class="row" id="mars-listings">
+    <div class="row" id="mission to mars">
       <div class="col-md-12">
-        <h4> </h4> 
+      <h2 class="heading"> Mars News</h2>
+      <h3 class="heading"> {{scrape_info.news_title}} </h3>
+      <h4 class="heading"> {{scrape_info.news_p}} </h4>
       </div>
     </div>
-    {% endfor %}
 
+    <div class="row" id="mission to mars">
+      <div class="col-md-12">
+      <h2 class="heading" Mars Images</h2>
+      <img src= {{scrape_info.featured_image_url}} >
+      </div>
+    </div>    
+
+    <div class="row" id="mission to mars">
+       <div class="col-md-12">
+       <h2 class="heading" Mars Weather</h2>
+       <img src= {{scrape_info.mars_weather}} >
+       </div>
+    </div>    
+
+    <div class="row" id="mission to mars">
+      <div class="col-md-12">
+      <h2 class="heading" Mars Fact</h2>
+        {{dict.facts|safe}}
+      </div>
+    </div>    
+
+    <div class="row" id="mission to mars">
+      <div class="col-md-12">
+      <h2 class="heading" Mars Hemisphere Iamge</h2>
+      <h3 class="heading"> {{scrape_info.title_list}} </h3>
+      <img src= {{hemisphere_img_url}} >
+      </div>
+   </div>   
+   
+   
   </div>
 </body>
 
