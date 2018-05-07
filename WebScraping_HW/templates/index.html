@@ -29,32 +29,32 @@
 
     <div class="row" id="mission to mars">
       <div class="col-md-12">
-      <h2 class="heading" Mars Images</h2>
+      <h2 class="heading"> Mars Images</h2>
       <img src= {{scrape_info.featured_image_url}} >
       </div>
     </div>    
 
     <div class="row" id="mission to mars">
        <div class="col-md-12">
-       <h2 class="heading" Mars Weather</h2>
-       <img src= {{scrape_info.mars_weather}} >
+       <h2 class="heading"> Mars Weather</h2>
+       <h4 class="heading"> {{scrape_info.mars_weather}}</h4>
        </div>
     </div>    
 
     <div class="row" id="mission to mars">
       <div class="col-md-12">
-      <h2 class="heading" Mars Fact</h2>
-        {{dict.facts|safe}}
+      <h2 class="heading"> Mars Fact</h2>
+        {{scrape_info.fact_html|safe}}
       </div>
     </div>    
 
-    <div class="row" id="mission to mars">
+    <!-- <div class="row" id="mission to mars">
       <div class="col-md-12">
       <h2 class="heading" Mars Hemisphere Iamge</h2>
       <h3 class="heading"> {{scrape_info.title_list}} </h3>
       <img src= {{hemisphere_img_url}} >
       </div>
-   </div>   
+    </div>    -->
    
    
   </div>

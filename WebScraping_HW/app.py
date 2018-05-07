@@ -21,7 +21,9 @@ def clear():
 def scrape():
     listings = mongo.db.listings
     listings_data = scrape_mars.scrape()
-    listings.insert_one(listing_data)
+    # clear all data to have the most updated data
+    listings.delete_many({})
+    listings.insert_one(listings_data)
     
     return redirect("http://127.0.0.1:5000/", code=302)
 

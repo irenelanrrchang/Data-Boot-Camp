@@ -29,23 +29,21 @@ def scrape ():
     soup = BeautifulSoup(html, 'html.parser')
     # Retrieve all elements that contain book information
     articles = soup.find_all('div', class_='list_text')
+    time.sleep(10)
 
     # Iterate through each news
-    for article in articles:
+    # for article in articles:
             
             # Use Beautiful Soup's find() method to navigate and retrieve attributes
             # Collect the latest News Title and Paragragh Text. Assign the text to variables that can be referenced
-            news_p = article.find ('div', class_='article_teaser_body').text
-        
-            link = article.find('a')
-            href = link['href']
-            news_title = link.text
-            print('-----------')
-            print(news_title)
-            print('...........')
-            print(news_p)
-            print('https://mars.nasa.gov/' + href)
+    news_p = articles[0].find ('div', class_='article_teaser_body').text
+    time.sleep(10)
 
+    link = articles[0].find('a')
+    href = link['href']
+    news_title = link.text
+    # Close the browser window after performing the code
+    browser.quit()
 
     # In[4]:
 
@@ -87,7 +85,8 @@ def scrape ():
 
     featured_image_url = link["href"]
     featured_image_url
-
+    # Close the browser window after performing the code
+    browser.quit()
 
     # In[10]:
 
@@ -114,11 +113,14 @@ def scrape ():
     # Scrape the latest Mars weather tweet from the page. 
     # Save the tweet text for the weather report as a variable called mars_weather.
     news = soup.find_all('div', class_= "js-tweet-text-container")
-    for a_news in news:   
-        mars_weather = a_news.find('p', class_= "TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").text
-        print('-----------')
-        print(mars_weather)
+    time.sleep(5)
+    # for a_news in news:   
+    mars_weather = news[0].find('p', class_= "TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").text
 
+    # print('-----------')
+    # print(mars_weather)
+    # Close the browser window after performing the code
+    browser.quit()
 
     # In[13]:
 
@@ -129,21 +131,22 @@ def scrape ():
     url = 'https://space-facts.com/mars/'
     # Use Pandas to convert the data to a HTML table string`
     tables = pd.read_html(url)
-    tables
+    
 
 
     # In[14]:
 
 
     df = tables [0]
-    df
+    time.sleep(5)
+    
 
 
     # In[15]:
 
 
-    html = df.to_html(index=False)
-    html
+    html = df.to_html(header = None, index=False)
+    
 
 
     # In[16]:
@@ -204,6 +207,7 @@ def scrape ():
                 hemisphere_img_urls.append(dic)
         
         return hemisphere_img_urls
+    hemisphere_img_urls = hemisphere_info()
 
 
     
