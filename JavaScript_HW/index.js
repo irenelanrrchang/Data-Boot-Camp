@@ -1,6 +1,10 @@
 // Get references to the tbody element, input field and button
 var tbody = document.querySelector("tbody");
 var dateInput = document.querySelector("#date");
+var cityInput = document.querySelector("#city");
+var stateInput = document.querySelector("#state");
+var countryInput = document.querySelector("#country");
+var shapeInput = document.querySelector("#shape");
 var searchBtn = document.querySelector("#search");
 
 // Add an event listener to the searchButton, call handleSearchButtonClick when clicked
@@ -30,18 +34,34 @@ function renderTable() {
 function handleSearchButtonClick() {
   // Format the user's search by removing leading and trailing whitespace, lowercase the string
   var filterDate = dateInput.value.trim();
-// var filterDate = dateInput.value.trim().toLowerCase();
+  var filterCity = cityInput.value.trim().toLowerCase();
+  var filterState = stateInput.value.trim().toLowerCase();
+  var filterCountry = countryInput.value.trim().toLowerCase();
+  var filterShape = shapeInput.value.trim().toLowerCase();
 
   // Set filteredData to an array of all eventData whose "datetime" matches the filter
-  filteredData = dataSet.filter(function(eventData) {
-    var eventDataDate = eventData.datetime;
-// var eventDataDate = eventData.datetime.toLowerCase();
+  // filteredData = dataSet.filter(function(eventData) {
+  //   var eventDataDate = eventData.datetime;
 
-    // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
-    return eventDataDate === filterDate;
-  });
-  renderTable();
-}
+// var eventDataDate = eventData.datetime.toLowerCase();
+  function multipleFilter(filteredData) {
+      var filtered= [];
+      for (var k = 0; k < dataSet.length; k++) {
+      var item = dataSet[k];
+      // If true, push the data to the filteredlist, otherwise don't add it to filteredlist
+      if (item.datetime == filterDate && item.city == filterCity && item.state == filterState  && item.country == filterCountry && item.shape == filterShape) filtered.push(item);
+      };
+
+    console.log(filtered)
+    
+    return filtered;
+  }
+  
+  filtered = multipleFilter(filteredData);  
+
+  renderTable();  
+  };
+
 
 // Render the table for the first time on page load
-renderTable();
+
