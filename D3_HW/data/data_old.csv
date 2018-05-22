@@ -1,0 +1,52 @@
+id,state,abbr,poverty,copd
+1,Alabama,AL,19.3,10.2
+2,Alaska,AK,11.2,4.4
+3,Arizona,AZ,18.2,6.9
+4,Arkansas,AR,18.9,9
+5,California,CA,16.4,4.9
+6,Colorado,CO,12,4
+7,Connecticut,CT,10.8,5.1
+8,Delaware,DE,12.5,6.5
+9,District of Columbia,DC,17.7,5.6
+10,Florida,FL,16.5,7.6
+11,Georgia,GA,18.3,7.4
+12,Hawaii,HI,11.4,3.8
+13,Idaho,ID,14.8,4.9
+14,Illinois,IL,14.4,5.8
+15,Indiana,IN,15.2,8.7
+16,Iowa,IA,12.2,5.7
+17,Kansas,KS,13.6,6.6
+18,Kentucky,KY,19.1,12.3
+19,Louisiana,LA,19.8,7.6
+20,Maine,ME,14.1,7.8
+21,Maryland,MD,10.1,5.8
+22,Massachusetts,MA,11.6,6.5
+23,Michigan,MI,16.2,8.8
+24,Minnesota,MN,11.5,4.4
+25,Mississippi,MS,21.5,7.4
+26,Missouri,MO,15.5,8.2
+27,Montana,MT,15.4,6.8
+28,Nebraska,NE,12.4,5.8
+29,Nevada,NV,15.2,6.9
+30,New Hampshire,NH,9.2,6.5
+31,New Jersey,NJ,11.1,5.6
+32,New Mexico,NM,21.3,5.7
+33,New York,NY,15.9,5.8
+34,North Carolina,NC,17.2,7.8
+35,North Dakota,ND,11.5,4.7
+36,Ohio,OH,15.8,8.2
+37,Oklahoma,OK,16.6,8
+38,Oregon,OR,16.6,5.7
+39,Pennsylvania,PA,13.6,6.8
+40,Rhode Island,RI,14.3,5.7
+41,South Carolina,SC,18,7.6
+42,South Dakota,SD,14.2,5.6
+43,Tennessee,TN,18.3,10.7
+44,Texas,TX,17.2,5.3
+45,Utah,UT,11.7,3.6
+46,Vermont,VT,12.2,6.3
+47,Virginia,VA,11.8,6.4
+48,Washington,WA,13.2,6
+49,West Virginia,WV,18.3,13.5
+50,Wisconsin,WI,13.2,5.2
+51,Wyoming,WY,11.2,6.7

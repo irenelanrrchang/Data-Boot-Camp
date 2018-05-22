@@ -101,7 +101,8 @@ def otu_list():
     # }
     # """
 def metadata(sample):
-    results = session.query(Metadata.AGE, Metadata.BBTYPE, Metadata.ETHNICITY, Metadata.GENDER, Metadata.LOCATION, Metadata.SAMPLEID).filter(Metadata.SAMPLEID == "BB_" + sample).all()
+    sampleID=(sample.split("_")[1])
+    results = session.query(Metadata.AGE, Metadata.BBTYPE, Metadata.ETHNICITY, Metadata.GENDER, Metadata.LOCATION, Metadata.SAMPLEID).filter(Metadata.SAMPLEID == sampleID).all()
     result = list(results)
     # result = results[0]
     metadata_list = {}
